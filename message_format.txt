@@ -1,0 +1,6 @@
+We are sending the hit or sink message as part of send_resonse() function
+The header included here is self.send_header('Content-Type','text/plain; charset=utf-8') on the server side
+On the client side this gets deciphered and then printed.
+For example server might send 200 hit=1&sink=C for a successfull hit
+410 Gone will be printed if no sink can be done
+400 Bad Request if trying to sink at no ship locations and 404 notFound for trying and invalid location are also printed.
